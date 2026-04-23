@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faisal Khan — Graphic Designer</title>
+    <meta name="description"
+        content="Faisal Khan — Graphic Designer from Jalgaon, Maharashtra. Brand Identity, Social Media, Print & AI-Powered Design." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Oswald:wght@700&family=Montserrat:wght@900&family=Bangers&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Cursors -->
+    <div id="theme-transition"></div>
+    <div id="sp-cursor"><svg viewBox="0 0 36 36" fill="none">
+            <circle cx="18" cy="18" r="17" fill="white" stroke="#E23636" stroke-width="2" />
+            <line x1="18" y1="1" x2="18" y2="35" stroke="#E23636" stroke-width="1" opacity=".3" />
+            <line x1="1" y1="18" x2="35" y2="18" stroke="#E23636" stroke-width="1" opacity=".3" />
+            <line x1="5" y1="5" x2="31" y2="31" stroke="#E23636" stroke-width="1" opacity=".2" />
+            <line x1="31" y1="5" x2="5" y2="31" stroke="#E23636" stroke-width="1" opacity=".2" />
+            <ellipse cx="18" cy="18" rx="5" ry="7" fill="#E23636" />
+            <ellipse cx="18" cy="13" rx="3" ry="3" fill="#E23636" />
+            <path d="M13 15 Q8 12 5 10" stroke="#E23636" stroke-width="1.5" stroke-linecap="round" fill="none" />
+            <path d="M13 18 Q8 17 5 18" stroke="#E23636" stroke-width="1.5" stroke-linecap="round" fill="none" />
+            <path d="M13 21 Q8 22 5 26" stroke="#E23636" stroke-width="1.5" stroke-linecap="round" fill="none" />
+            <path d="M23 15 Q28 12 31 10" stroke="#E23636" stroke-width="1.5" stroke-linecap="round" fill="none" />
+            <path d="M23 18 Q28 17 31 18" stroke="#E23636" stroke-width="1.5" stroke-linecap="round" fill="none" />
+            <path d="M23 21 Q28 22 31 26" stroke="#E23636" stroke-width="1.5" stroke-linecap="round" fill="none" />
+        </svg></div>
+    <div id="sp-trail"></div>
+    <canvas id="web-canvas"></canvas>
+    <canvas id="web-shoot-overlay"></canvas>
+
+    <!-- NAV -->
+    <nav id="nav">
+        <a href="#hero" class="nav-logo">FK<span>.</span></a>
+        <ul class="nav-links">
+            <li><a href="#about">Origin</a></li>
+            <li><a href="#experience">History</a></li>
+            <li><a href="#projects">Missions</a></li>
+            <li><a href="#services">Powers</a></li>
+            <li><a href="#contact">Signal</a></li>
+        </ul>
+        <div class="nav-right">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <span class="toggle-track">
+                    <span class="toggle-thumb"></span>
+                    <span class="toggle-icon sun">☀</span>
+                    <span class="toggle-icon moon">🌙</span>
+                </span>
+            </button>
+            <div class="nav-ham" id="navHam">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#about" class="mm-link">Origin Story</a>
+        <a href="#experience" class="mm-link">Mission Timeline</a>
+        <a href="#projects" class="mm-link">Case Files</a>
+        <a href="#services" class="mm-link">Powers</a>
+        <a href="#contact" class="mm-link">Send Signal</a>
+    </div>
+
+    <!-- HERO -->
+    <section id="hero">
+        <canvas id="hero-bg-canvas"></canvas>
+        <div class="hero-parallax-layer" id="skyLayer"></div>
+        <div class="hero-parallax-layer" id="cityLayer">
+            <svg id="citySvg" viewBox="0 0 1440 300" preserveAspectRatio="none"
+                xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+        <div class="hero-content">
+            <p class="hero-eyebrow">Your Friendly Neighborhood Designer</p>
+            <h1 class="hero-name" id="heroName">Faisal Khan</h1>
+            <h2 class="hero-sub">Graphic Designer</h2>
+            <p class="hero-desc">Brand Identity · Social Media · Print · AI-Powered Design<br>Based in Maharashtra,
+                India</p>
+            <div class="hero-cta">
+                <a href="https://drive.google.com/drive/folders/185pmsgK8kz7mUolUtUkGxVMjH7kAwLsG" target="_blank"
+                    rel="noopener" class="btn btn-primary">View My Work 🕷</a>
+                <a href="#contact" class="btn btn-blue" id="shootWebBtn">Shoot a Web 🕸</a>
+            </div>
+        </div>
+        <div class="spiderman-wrap" id="spiderman">
+            <svg id="spideySvg" viewBox="0 0 220 380" fill="none" xmlns="http://www.w3.org/2000/svg"></svg>
+        </div>
+        <div class="spidey-bubble" id="spideyBubble">"With great design comes great responsibility."</div>
+    </section>
+
+    <!-- MARQUEE -->
+    <div class="marquee-wrap" aria-hidden="true">
+        <div class="marquee-track">
+            <span class="mi"><em>★</em> Brand Identity</span><span class="mi"><em>★</em> Social Media</span><span
+                class="mi"><em>★</em> Print Collateral</span><span class="mi"><em>★</em> Adobe Illustrator</span><span
+                class="mi"><em>★</em> Visual Storytelling</span><span class="mi"><em>★</em> Marketing
+                Creatives</span><span class="mi"><em>★</em> AI-Powered Design</span>
+            <span class="mi"><em>★</em> Brand Identity</span><span class="mi"><em>★</em> Social Media</span><span
+                class="mi"><em>★</em> Print Collateral</span><span class="mi"><em>★</em> Adobe Illustrator</span><span
+                class="mi"><em>★</em> Visual Storytelling</span><span class="mi"><em>★</em> Marketing
+                Creatives</span><span class="mi"><em>★</em> AI-Powered Design</span>
+        </div>
+    </div>
+
+    <!-- ABOUT -->
+    <section id="about">
+        <div class="section-inner grid-2">
+            <div class="reveal">
+                <p class="sec-label">Chapter 01</p>
+                <h2 class="sec-title">The Origin<br>Story.</h2>
+                <p class="about-text">I'm Faisal Khan — a graphic designer from Jalgaon, Maharashtra with 3+ years of
+                    experience turning blank canvases into powerful brand stories.</p>
+                <p class="about-text">Just like Peter Parker learned that <em>"with great power comes great
+                        responsibility"</em> — I believe great design carries great purpose. Every pixel, every color,
+                    every curve is intentional.</p>
+                <p class="about-text">Currently pursuing B.Tech in Computer Science, I blend design craft with an
+                    AI-forward mindset to create work that's both beautiful and strategic.</p>
+                <div class="stat-row">
+                    <div class="stat"><span class="stat-num">3+</span><span class="stat-label">Years Active</span></div>
+                    <div class="stat"><span class="stat-num">10+</span><span class="stat-label">Clients</span></div>
+                    <div class="stat"><span class="stat-num">4</span><span class="stat-label">Companies</span></div>
+                </div>
+            </div>
+            <div class="reveal">
+                <div class="comic-panel">
+                    <span class="panel-caption">Power Set</span>
+                    <p class="tools-lbl">Technical Skills</p>
+                    <div class="skills-grid">
+                        <span class="skill-badge">Adobe Illustrator</span><span
+                            class="skill-badge">Photoshop</span><span class="skill-badge">Canva</span><span
+                            class="skill-badge">Filmora</span><span class="skill-badge">CapCut</span><span
+                            class="skill-badge">ChatGPT</span><span class="skill-badge">Prompt Eng.</span>
+                    </div>
+                    <p class="tools-lbl">Core Abilities</p>
+                    <div class="skills-grid">
+                        <span class="skill-badge">Brand Identity</span><span class="skill-badge">Typography</span><span
+                            class="skill-badge">Color Theory</span><span class="skill-badge">AI Design</span><span
+                            class="skill-badge">Layout Design</span><span class="skill-badge">Reel Editing</span>
+                    </div>
+                    <p class="tools-lbl">Certifications</p>
+                    <div class="skills-grid">
+                        <span class="skill-badge">Photoshop — Great Learning</span><span class="skill-badge">AI —
+                            Accenture 2024</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience">
+        <div class="section-inner">
+            <p class="sec-label reveal">Chapter 02</p>
+            <h2 class="sec-title reveal">The Mission <span>Timeline.</span></h2>
+            <div class="timeline">
+                <div class="tl-item reveal">
+                    <div class="tl-dot">🕷</div>
+                    <div class="tl-body">
+                        <p class="tl-date">Dec 2025 — Apr 2026</p>
+                        <h3 class="tl-company">Fortune Media & Marketing</h3>
+                        <p class="tl-role">Graphic Designer · Full Time · Nashik</p>
+                        <p class="tl-desc">Designed premium editorial-style social media posts and ad creatives. Managed
+                            creatives for 10 distinct clients single-handedly in the first month. Produced brochures,
+                            posters, and marketing assets.</p>
+                    </div>
+                </div>
+                <div class="tl-item reveal">
+                    <div class="tl-dot">◈</div>
+                    <div class="tl-body">
+                        <p class="tl-date">Apr 2025 — Nov 2025</p>
+                        <h3 class="tl-company">Sourcecatch Konnect</h3>
+                        <p class="tl-role">Graphic Designer · Full Time · Jalgaon</p>
+                        <p class="tl-desc">Designed website, social media, and marketing creatives for Baba Namkeen.
+                            Developed website visuals for Zero Energy aligning with brand identity and UX goals.</p>
+                    </div>
+                </div>
+                <div class="tl-item reveal">
+                    <div class="tl-dot">◉</div>
+                    <div class="tl-body">
+                        <p class="tl-date">Sep 2024 — Mar 2025</p>
+                        <h3 class="tl-company">Fly Creative Solutions</h3>
+                        <p class="tl-role">Graphic Designer · Intern · Jalgaon</p>
+                        <p class="tl-desc">Created logos, social media posts, and marketing materials using Adobe
+                            Illustrator, Photoshop, and Canva. Every hero starts somewhere.</p>
+                    </div>
+                </div>
+                <div class="tl-item reveal">
+                    <div class="tl-dot">★</div>
+                    <div class="tl-body">
+                        <p class="tl-date">Jul 2023 — Sep 2024</p>
+                        <h3 class="tl-company">Freelancing</h3>
+                        <p class="tl-role">Freelance Graphic Designer · Jalgaon</p>
+                        <p class="tl-desc">Logos, brand identities, Instagram creatives, LinkedIn posts — built from
+                            nothing. Every project a lesson, every client a new city to protect.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects">
+        <div class="section-inner">
+            <p class="sec-label reveal">Chapter 03</p>
+            <h2 class="sec-title reveal">The <span>Case Files.</span></h2>
+            <div class="projects-grid">
+                <div class="proj-card reveal">
+                    <span class="proj-num">01</span>
+                    <p class="proj-tag">Jul 2024 · Branding</p>
+                    <h3 class="proj-title">College Fest Branding & Identity</h3>
+                    <p class="proj-desc">Complete branding for a college annual fest — logo, posters, banners, and
+                        merchandise. Developed color schemes, typography, and brand guidelines.</p>
+                    <div class="proj-chips"><span>Logo Design</span><span>Print</span><span>Brand System</span></div>
+                </div>
+                <div class="proj-card reveal">
+                    <span class="proj-num">02</span>
+                    <p class="proj-tag">Apr 2025 · Campaign</p>
+                    <h3 class="proj-title">Baba Namkeen Marketing Campaign</h3>
+                    <p class="proj-desc">Web banners, landing page graphics, and product highlights. Instagram templates
+                        and promotional materials including flyers, ads, and packaging elements.</p>
+                    <div class="proj-chips"><span>Web Banners</span><span>Social</span><span>Packaging</span></div>
+                </div>
+                <div class="proj-card reveal">
+                    <span class="proj-num">03</span>
+                    <p class="proj-tag">2025 · Web Visuals</p>
+                    <h3 class="proj-title">Zero Energy — Website Visuals</h3>
+                    <p class="proj-desc">Complete website visuals aligned with brand identity and UX goals. Cohesive
+                        design across all digital touchpoints — clean, modern, electric.</p>
+                    <div class="proj-chips"><span>Web Design</span><span>Brand Identity</span><span>UX Visuals</span>
+                    </div>
+                </div>
+                <div class="proj-card reveal">
+                    <span class="proj-num">04</span>
+                    <p class="proj-tag">2023–Present · Freelance</p>
+                    <h3 class="proj-title">Freelance Brand Identities</h3>
+                    <p class="proj-desc">Logos, brand systems, Instagram creatives and LinkedIn posts for multiple
+                        businesses. Every brand got its own superpower.</p>
+                    <div class="proj-chips"><span>Logos</span><span>Brand Systems</span><span>Social Media</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+        <div class="section-inner">
+            <p class="sec-label reveal">Chapter 04</p>
+            <h2 class="sec-title reveal">My <span>Super Powers.</span></h2>
+            <div class="services-grid">
+                <div class="svc-card reveal">
+                    <span class="svc-icon">◈</span>
+                    <div class="svc-line"></div>
+                    <h3 class="svc-title">Brand Identity</h3>
+                    <p class="svc-desc">Logo design, color systems, typography, and brand guidelines that give your
+                        business a memorable visual presence across every platform.</p>
+                </div>
+                <div class="svc-card reveal">
+                    <span class="svc-icon">◉</span>
+                    <div class="svc-line"></div>
+                    <h3 class="svc-title">Social Media Design</h3>
+                    <p class="svc-desc">Eye-catching Instagram posts, LinkedIn creatives, ad banners and story templates
+                        that boost engagement and maintain brand consistency.</p>
+                </div>
+                <div class="svc-card reveal">
+                    <span class="svc-icon">◍</span>
+                    <div class="svc-line"></div>
+                    <h3 class="svc-title">Print & Marketing</h3>
+                    <p class="svc-desc">Brochures, flyers, posters, packaging and promotional materials designed for
+                        impact — from concept to print-ready files.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="section-inner contact-inner">
+            <p class="sec-label reveal">Chapter 05</p>
+            <h2 class="contact-title reveal">Your <span>Spider-Sense</span><br>Is Tingling.</h2>
+            <p class="contact-sub reveal">That feeling when you see a project that needs a great designer? Trust it.
+                Let's build something the whole city looks up at.</p>
+            <form class="contact-form reveal" id="contactForm" action="https://formspree.io/f/pkhan997548@gmail.com"
+                method="POST">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" id="name" name="name" placeholder="Peter Parker" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="email" id="email" name="email" placeholder="peter@dailybugle.com" required />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" id="subject" name="subject" placeholder="I need a superhero designer..." />
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
+                        required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" id="submitBtn">Thwip Me a Message 🕸</button>
+                <p class="form-status" id="formStatus"></p>
+            </form>
+            <div class="contact-links reveal">
+                <a href="mailto:pkhan997548@gmail.com" class="contact-link">✉ pkhan997548@gmail.com</a>
+                <a href="tel:+917666942881" class="contact-link">☎ +91 7666942881</a>
+                <a href="https://www.linkedin.com/in/faisal-khan-design/" target="_blank" rel="noopener"
+                    class="contact-link">in LinkedIn</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 <span>Faisal Khan</span>. All rights reserved.</p>
+        <p>Made with <span>♥</span> in Jalgaon, MH · <a href="https://www.linkedin.com/in/faisal-khan-design/"
+                target="_blank" rel="noopener">LinkedIn</a></p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
